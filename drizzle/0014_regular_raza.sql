@@ -1,0 +1,2 @@
+ALTER TABLE `deliverables` MODIFY COLUMN `status` enum('pending','in_progress','submitted','approved','needs_revision','rejected') NOT NULL DEFAULT 'pending';--> statement-breakpoint
+ALTER TABLE `deliverables` ADD `reviewNotes` text;

@@ -1,0 +1,2 @@
+ALTER TABLE `requestsForInformation` MODIFY COLUMN `status` enum('open','in_progress','resolved','closed') NOT NULL DEFAULT 'open';--> statement-breakpoint
+ALTER TABLE `requestsForInformation` ADD `requestType` enum('production_photos','updated_plans_permit','drive_logs','rdp_statement','other') DEFAULT 'other' NOT NULL;

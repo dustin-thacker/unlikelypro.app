@@ -1,0 +1,1 @@
+ALTER TABLE `extractedData` ADD `detectedProductIds` text;

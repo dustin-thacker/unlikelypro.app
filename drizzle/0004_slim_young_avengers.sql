@@ -1,0 +1,1 @@
+ALTER TABLE `attachments` MODIFY COLUMN `fileType` enum('plan','permit','production_photo') NOT NULL;

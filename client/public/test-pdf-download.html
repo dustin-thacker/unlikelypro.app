@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test PDF Download</title>
+</head>
+<body>
+    <h1>Test PDF Generation</h1>
+    <button onclick="testDownload()">Generate and Download Test PDF</button>
+    <div id="status"></div>
+    
+    <script>
+        async function testDownload() {
+            const status = document.getElementById('status');
+            status.textContent = 'Generating PDF...';
+            
+            try {
+                // Import pdf-lib from CDN
+                const { PDFDocument, rgb, StandardFonts } = await import('https://cdn.skypack.dev/pdf-lib');
+                
+                // Create PDF
+                const pdfDoc = await PDFDocument.create();
+                const page = pdfDoc.addPage([612, 792]);
+                const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+                
+                page.drawText('Test Certification Document', {
+                    x: 50,
+                    y: 700,
+                    size: 20,
+                    font: font,
+                    color: rgb(0, 0, 0),
+                });
+                
+                page.drawText('This is a test to verify PDF generation works correctly.', {
+                    x: 50,
+                    y: 670,
+                    size: 12,
+                    font: font,
+                    color: rgb(0, 0, 0),
+                });
+                
+                // Save PDF
+                const pdfBytes = await pdfDoc.save();
+                
+                // Download
+                const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'test-certification.pdf';
+                a.click();
+                URL.revokeObjectURL(url);
+                
+                status.textContent = 'PDF downloaded! Check your downloads folder.';
+            } catch (error) {
+                status.textContent = 'Error: ' + error.message;
+                console.error(error);
+            }
+        }
+    </script>
+</body>
+</html>

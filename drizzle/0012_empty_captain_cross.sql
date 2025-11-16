@@ -1,0 +1,2 @@
+ALTER TABLE `projects` MODIFY COLUMN `status` enum('draft','pending_verification','verified','scheduled','in_progress','inspection_complete','invoice_generated','invoiced','paid','closed','completed','cancelled') NOT NULL DEFAULT 'draft';--> statement-breakpoint
+ALTER TABLE `tasks` MODIFY COLUMN `status` enum('pending','scheduled','assigned','in_progress','completed','verified','cancelled') NOT NULL DEFAULT 'pending';
