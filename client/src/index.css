@@ -179,9 +179,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@300;400;500;600&display=swap');
 
 /* Custom Cursor Styles */
-* {
-  cursor: none !important;
-}
+/* Cursor hidden by default, but shown on login page and interactive elements */
 
 /* Show normal cursor on login page */
 .login-page,
@@ -203,8 +201,12 @@
   transition: width 0.2s ease, height 0.2s ease;
 }
 
-/* Hide default cursor on the body */
-body {
+/* Hide default cursor on the body (except login page) */
+body:not(.login-page) {
+  cursor: none !important;
+}
+
+body:not(.login-page) * {
   cursor: none !important;
 }
 
