@@ -70,8 +70,8 @@ export default function Home() {
 
         {/* Main Title */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-tight tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
-          Building Code Compliance<br />
-          Project Operations Portal
+          Code Compliance Project Operations Application{' '}
+          <span className="text-xs md:text-sm text-gray-500 align-middle" style={{ fontFamily: "'Lora', serif" }}>(CoCo POps)</span>
         </h1>
 
         {/* Subtitle */}
