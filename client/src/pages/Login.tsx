@@ -4,9 +4,9 @@ import { useLocation } from 'wouter';
 export default function Login() {
   // Disable custom cursor on login page
   useEffect(() => {
-    document.body.style.cursor = 'auto';
+    document.body.classList.add('login-page');
     return () => {
-      document.body.style.cursor = '';
+      document.body.classList.remove('login-page');
     };
   }, []);
   const [, setLocation] = useLocation();
@@ -59,7 +59,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center px-4">
+    <div className="login-page min-h-screen bg-white flex items-center justify-center px-4">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <img

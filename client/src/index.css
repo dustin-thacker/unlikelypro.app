@@ -183,6 +183,12 @@
   cursor: none !important;
 }
 
+/* Show normal cursor on login page */
+.login-page,
+.login-page * {
+  cursor: auto !important;
+}
+
 .custom-cursor-dot {
   position: fixed;
   top: 0;
@@ -200,6 +206,11 @@
 /* Hide default cursor on the body */
 body {
   cursor: none !important;
+}
+
+/* Show normal cursor on login page body */
+body.login-page {
+  cursor: auto !important;
 }
 
 /* Apply Playfair Display to headings */
