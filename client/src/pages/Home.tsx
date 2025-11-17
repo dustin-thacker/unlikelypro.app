@@ -69,10 +69,13 @@ export default function Home() {
         </div>
 
         {/* Main Title */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-8 leading-tight tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
-          Code Compliance Project Operations Application{' '}
-          <span className="text-xs md:text-sm text-gray-500 align-middle" style={{ fontFamily: "'Lora', serif" }}>(CoCo POps)</span>
-        </h1>
+        <div className="mb-8">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
+            Welcome to the<br />
+            Code Compliance Project Operations Application
+          </h1>
+          <p className="text-xs md:text-sm text-gray-500 mt-2" style={{ fontFamily: "'Lora', serif" }}>(CoCo POps)</p>
+        </div>
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-16 font-light leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
