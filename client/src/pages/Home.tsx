@@ -70,7 +70,7 @@ export default function Home() {
 
         {/* Main Title */}
         <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-white leading-tight tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-normal text-white leading-tight tracking-wide" style={{ fontFamily: "'Playfair Display', serif" }}>
             Welcome to the<br />
             Code Compliance Project Operations Application
           </h1>
