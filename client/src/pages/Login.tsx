@@ -59,7 +59,7 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-4">
+    <div className="min-h-screen bg-white flex items-center justify-center px-4">
       <div className="max-w-md w-full space-y-8">
         <div className="text-center">
           <img
@@ -67,10 +67,10 @@ export default function Login() {
             alt="CoCo POps"
             className="mx-auto h-24 w-24 mb-6"
           />
-          <h2 className="text-4xl font-bold text-white font-serif">
+          <h2 className="text-4xl font-bold text-black font-serif">
             Welcome Back
           </h2>
-          <p className="mt-2 text-gray-400">
+          <p className="mt-2 text-gray-600">
             Sign in to access CoCo POps
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function Login() {
 
           <div className="space-y-4">
             <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+              <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
               </label>
               <input
@@ -94,13 +94,13 @@ export default function Login() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                 placeholder="your@email.com"
               />
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-300 mb-2">
+              <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
                 Password
               </label>
               <input
@@ -110,7 +110,7 @@ export default function Login() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
+                className="w-full px-4 py-3 bg-white border border-gray-300 rounded-lg text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent"
                 placeholder="••••••••"
               />
             </div>
@@ -128,7 +128,7 @@ export default function Login() {
         <div className="text-center">
           <a
             href="/"
-            className="text-sm text-gray-400 hover:text-yellow-400 transition-colors"
+            className="text-sm text-gray-600 hover:text-yellow-600 transition-colors"
           >
             ← Back to home
           </a>
