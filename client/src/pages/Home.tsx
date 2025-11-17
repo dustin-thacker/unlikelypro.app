@@ -3,7 +3,7 @@ import RoleSwitcher from "@/components/RoleSwitcher";
 import CustomCursor from "@/components/CustomCursor";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
-import { getLoginUrl } from "@/const";
+import { Link } from "wouter";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
 
@@ -86,13 +86,14 @@ export default function Home() {
 
         {/* Portal Button */}
         <div className="mb-12">
-          <Button
-            onClick={() => window.location.href = getLoginUrl()}
-            className="bg-gray-300 hover:bg-gray-400 text-black font-normal px-8 py-6 text-base md:text-lg rounded-md transition-colors"
-            style={{ fontFamily: "'Lora', serif", cursor: 'pointer' }}
-          >
-            Login
-          </Button>
+          <Link href="/login">
+            <Button
+              className="bg-gray-300 hover:bg-gray-400 text-black font-normal px-8 py-6 text-base md:text-lg rounded-md transition-colors"
+              style={{ fontFamily: "'Lora', serif", cursor: 'pointer' }}
+            >
+              Login
+            </Button>
+          </Link>
         </div>
 
         {/* Horizontal Divider */}
