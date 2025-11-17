@@ -87,7 +87,7 @@ export default function Home() {
             className="bg-gray-300 hover:bg-gray-400 text-black font-normal px-8 py-6 text-base md:text-lg rounded-md transition-colors"
             style={{ fontFamily: "'Lora', serif", cursor: 'pointer' }}
           >
-            Open my portal
+            Open CoCo POps
           </Button>
         </div>
 
