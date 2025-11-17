@@ -95,6 +95,11 @@ export default function Home() {
           </Button>
         </div>
 
+        {/* Horizontal Divider */}
+        <div className="w-full max-w-2xl mx-auto mb-12">
+          <hr className="border-gray-700" />
+        </div>
+
         {/* Trust Badge */}
         <div className="mb-12">
           <p className="text-base md:text-lg text-gray-500 mb-3 font-light" style={{ fontFamily: "'Lora', serif" }}>Trusted Since 2018</p>
