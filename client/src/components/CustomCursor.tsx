@@ -27,24 +27,14 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Main cursor dot */}
+      {/* Single solid yellow dot */}
       <div
         className="custom-cursor-dot"
         style={{
           left: `${position.x}px`,
           top: `${position.y}px`,
-          width: isPointer ? '32px' : '12px',
-          height: isPointer ? '32px' : '12px',
-        }}
-      />
-      {/* Cursor ring */}
-      <div
-        className="custom-cursor-ring"
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
-          width: isPointer ? '48px' : '40px',
-          height: isPointer ? '48px' : '40px',
+          width: isPointer ? '20px' : '12px',
+          height: isPointer ? '20px' : '12px',
         }}
       />
     </>
