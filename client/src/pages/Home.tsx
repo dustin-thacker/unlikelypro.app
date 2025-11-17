@@ -79,9 +79,9 @@ export default function Home() {
 
         {/* Subtitle */}
         <p className="text-lg md:text-xl lg:text-2xl text-gray-400 max-w-3xl mx-auto mb-16 font-light leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
-          Comprehensive building code compliance project management,<br />
+          Comprehensive project compliance management,<br />
           jurisdictional coordination, interactive building code compliance agent,<br />
-          and real-time project tracking for AEC Professional Clients.
+          and real-time project tracking for AEC Professionals.
         </p>
 
         {/* Portal Button */}
