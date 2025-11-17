@@ -9,6 +9,7 @@ export const users = mysqlTable("users", {
   openId: varchar("openId", { length: 64 }).notNull().unique(),
   name: text("name"),
   email: varchar("email", { length: 320 }),
+  password: varchar("password", { length: 255 }), // For local authentication
   loginMethod: varchar("loginMethod", { length: 64 }),
   role: mysqlEnum("role", ["admin", "client_scheduler", "client_ap", "field_tech"]).default("client_scheduler").notNull(),
   client: varchar("client", { length: 255 }), // For client roles: Manassas - JES, Baltimore - JES, North Haven - Groundworks

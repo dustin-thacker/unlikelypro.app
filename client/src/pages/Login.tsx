@@ -1,7 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'wouter';
 
 export default function Login() {
+  // Disable custom cursor on login page
+  useEffect(() => {
+    document.body.style.cursor = 'auto';
+    return () => {
+      document.body.style.cursor = '';
+    };
+  }, []);
   const [, setLocation] = useLocation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
