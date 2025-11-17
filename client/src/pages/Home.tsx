@@ -1,8 +1,6 @@
 import { useAuth } from "@/_core/hooks/useAuth";
 import RoleSwitcher from "@/components/RoleSwitcher";
-import { Button } from "@/components/ui/button";
-import { Loader2, FileCheck, Calendar, CheckCircle, ArrowRight } from "lucide-react";
-import { APP_LOGO, APP_TITLE, getLoginUrl } from "@/const";
+import { Loader2 } from "lucide-react";
 import { useLocation } from "wouter";
 import { useEffect } from "react";
 
@@ -29,8 +27,8 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+      <div className="min-h-screen flex items-center justify-center bg-black">
+        <Loader2 className="w-8 h-8 animate-spin text-white" />
       </div>
     );
   }
@@ -38,123 +36,94 @@ export default function Home() {
   // Show loading while redirecting
   if (isAuthenticated && user) {
    return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-black">
       {/* Role Switcher for Testing */}
       <div className="fixed top-4 right-4 z-50">
         <RoleSwitcher />
       </div>
       <div className="flex items-center justify-center">
-        <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
+        <Loader2 className="w-8 h-8 animate-spin text-white" />
       </div>
     </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-slate-50">
-      {/* Header */}
-      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            {APP_LOGO && <img src={APP_LOGO} alt={APP_TITLE} className="h-8 w-8" />}
-            <h1 className="text-2xl font-bold text-slate-900">{APP_TITLE}</h1>
-          </div>
-          <Button onClick={() => window.location.href = getLoginUrl()}>
-            Sign In
-          </Button>
+    <div className="min-h-screen bg-black flex items-center justify-center px-4 py-12">
+      {/* Main Content */}
+      <div className="text-center max-w-6xl w-full">
+        {/* Logo */}
+        <div className="mb-12 flex justify-center">
+          <img 
+            src="/logo.png" 
+            alt="Unlikely Professionals" 
+            className="h-64 w-64 object-contain"
+          />
         </div>
-      </header>
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <h2 className="text-5xl font-bold text-slate-900 mb-6">
-          Streamline Your Inspection Projects
-        </h2>
-        <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-          Upload plans and permits, extract data automatically with AI, verify information, 
-          and schedule inspections—all in one seamless workflow.
+        {/* Main Title */}
+        <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          Building Code Compliance<br />
+          Project Operations Portal
+        </h1>
+
+        {/* Subtitle */}
+        <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12">
+          Comprehensive building code compliance management,<br />
+          jurisdiction coordination, and real-time project tracking.
         </p>
-        <Button
-          size="lg"
-          onClick={() => window.location.href = getLoginUrl()}
-          className="text-lg px-8 py-6"
-        >
-          Get Started
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Button>
-      </section>
 
-      {/* Features */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-              <FileCheck className="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">
-              Smart Document Upload
-            </h3>
-            <p className="text-slate-600">
-              Upload building plans and permits in PDF format. Our AI automatically extracts 
-              key information including property owner, address, jurisdiction, and permit numbers.
-            </p>
+        {/* Trust Badge */}
+        <div className="mb-8">
+          <p className="text-lg text-gray-500 mb-2">Trusted Since 2018</p>
+          <p className="text-2xl font-semibold text-white">Global Compliance Excellence</p>
+        </div>
+
+        {/* Statistics */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl mx-auto">
+          <div className="text-center">
+            <div className="text-5xl font-bold text-white mb-2">4,116</div>
+            <div className="text-gray-400">Projects Completed</div>
           </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-              <CheckCircle className="w-6 h-6 text-green-600" />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">
-              Data Verification
-            </h3>
-            <p className="text-slate-600">
-              Review and verify the extracted information before proceeding. Make corrections 
-              or add additional details to ensure accuracy.
-            </p>
+          <div className="text-center">
+            <div className="text-5xl font-bold text-white mb-2">80+</div>
+            <div className="text-gray-400">Jurisdictions Served</div>
           </div>
-
-          <div className="bg-white p-8 rounded-xl shadow-sm border hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-              <Calendar className="w-6 h-6 text-purple-600" />
-            </div>
-            <h3 className="text-xl font-semibold text-slate-900 mb-3">
-              Easy Scheduling
-            </h3>
-            <p className="text-slate-600">
-              Schedule your inspection with just a few clicks. Select your preferred date 
-              and time, and track the status of your project.
-            </p>
+          <div className="text-center">
+            <div className="text-5xl font-bold text-white mb-2">13</div>
+            <div className="text-gray-400">States Covered</div>
           </div>
         </div>
-      </section>
 
-      {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20 text-center">
-        <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-12 text-white">
-          <h2 className="text-4xl font-bold mb-4">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl mb-8 text-blue-100">
-            Create your account and submit your first inspection project today.
+        {/* USA Servicing */}
+        <div className="mb-12 max-w-4xl mx-auto">
+          <h3 className="text-xl font-semibold text-white mb-4">USA Servicing</h3>
+          <p className="text-gray-400 leading-relaxed">
+            Connecticut • Delaware • Massachusetts • Maine • Maryland • North Carolina • 
+            New Hampshire • New Jersey • New York • Pennsylvania • Virginia • Vermont • 
+            West Virginia
           </p>
-          <Button
-            size="lg"
-            variant="secondary"
-            onClick={() => window.location.href = getLoginUrl()}
-            className="text-lg px-8 py-6"
-          >
-            Sign Up Now
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
         </div>
-      </section>
 
-      {/* Footer */}
-      <footer className="border-t bg-slate-50 py-8">
-        <div className="container mx-auto px-4 text-center text-slate-600">
-          <p>&copy; {new Date().getFullYear()} {APP_TITLE}. All rights reserved.</p>
+        {/* Office Locations */}
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-xl font-semibold text-white mb-4">Office Locations</h3>
+          <div className="space-y-3">
+            <div>
+              <span className="text-white font-medium">North America: </span>
+              <span className="text-gray-400">
+                New Haven, CT • Baltimore, MD • Richmond, VA • Tampa, FL
+              </span>
+            </div>
+            <div>
+              <span className="text-white font-medium">South Africa: </span>
+              <span className="text-gray-400">
+                Cape Town • Johannesburg
+              </span>
+            </div>
+          </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 }
