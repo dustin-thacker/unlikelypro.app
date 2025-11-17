@@ -1,4 +1,4 @@
-# Inspection Tracker TODO
+# CoCo POps TODO
 
 ## Database & Backend
 - [x] Design database schema for projects, clients, permits, plans, tasks

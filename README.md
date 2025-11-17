@@ -1,4 +1,4 @@
-# Inspection Tracker
+# CoCo POps
 
 A full-stack web application for managing inspections, certifications, and related workflows.
 

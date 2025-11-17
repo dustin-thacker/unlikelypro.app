@@ -1,6 +1,6 @@
-# Inspection Tracker - Status Workflows Documentation
+# CoCo POps - Status Workflows Documentation
 
-This document defines the comprehensive status workflows for all entities in the Inspection Tracker system. These workflows ensure proper state transitions, role-based permissions, and automated notifications throughout the inspection lifecycle.
+This document defines the comprehensive status workflows for all entities in the CoCo POps system. These workflows ensure proper state transitions, role-based permissions, and automated notifications throughout the inspection lifecycle.
 
 ## Overview
 

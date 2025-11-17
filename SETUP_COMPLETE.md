@@ -258,7 +258,7 @@ inspection-tracker-recovery/
 
 **You're all set!** 🚀
 
-Your Inspection Tracker app is now:
+Your CoCo POps app is now:
 - ✓ Backed up on GitHub
 - ✓ Connected to a database
 - ✓ Ready for development in Manus

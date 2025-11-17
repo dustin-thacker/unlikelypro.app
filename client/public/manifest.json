@@ -1,11 +1,11 @@
 {
-  "name": "Inspection Tracker - Field Tech",
-  "short_name": "InspectionTracker",
-  "description": "Mobile inspection tracking for field technicians",
+  "name": "CoCo POps - Field Tech",
+  "short_name": "CoCo POps",
+  "description": "Code Compliance Project Operations Application for field technicians",
   "start_url": "/field-tech",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#2563eb",
+  "background_color": "#000000",
+  "theme_color": "#FCD34D",
   "orientation": "portrait",
   "icons": [
     {

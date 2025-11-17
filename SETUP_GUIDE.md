@@ -1,4 +1,4 @@
-# Setup Guide - Inspection Tracker Recovery
+# Setup Guide - CoCo POps Recovery
 
 ## Current Status
 

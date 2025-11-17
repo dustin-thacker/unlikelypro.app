@@ -1,6 +1,6 @@
-# Inspection Tracker - User Roles Documentation
+# CoCo POps - User Roles Documentation
 
-This document defines the four user roles in the Inspection Tracker system, their access levels, and intended use cases.
+This document defines the four user roles in the CoCo POps system, their access levels, and intended use cases.
 
 ## Role Overview
 
