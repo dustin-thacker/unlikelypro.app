@@ -25,14 +25,14 @@ export async function verifyPassword(password: string, hash: string): Promise<bo
 
 export async function generateToken(user: AuthUser): Promise<string> {
   const token = await new SignJWT({
-    id: user.id,
+    userId: user.id,  // Use userId to distinguish from OAuth tokens
     email: user.email,
     name: user.name,
     role: user.role,
   })
     .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
-    .setExpirationTime('7d')
+    .setExpirationTime('365d')  // Match OAuth token expiration
     .sign(JWT_SECRET);
 
   return token;

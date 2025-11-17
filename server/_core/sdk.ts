@@ -210,6 +210,23 @@ class SDKServer {
       const { payload } = await jwtVerify(cookieValue, secretKey, {
         algorithms: ["HS256"],
       });
+      
+      // Check if this is a local auth token (has userId instead of openId)
+      if ('userId' in payload && typeof payload.userId === 'number') {
+        // Local auth token - convert to session format
+        const user = await db.getUserById(payload.userId as number);
+        if (!user) {
+          console.warn("[Auth] User not found for local auth token");
+          return null;
+        }
+        return {
+          openId: user.openId,
+          appId: ENV.appId,
+          name: user.name || '',
+        };
+      }
+      
+      // OAuth token - use standard format
       const { openId, appId, name } = payload as Record<string, unknown>;
 
       if (
