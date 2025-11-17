@@ -78,7 +78,7 @@ export default function Home() {
         </div>
 
         {/* Subtitle */}
-        <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto mb-16 font-light leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
+        <p className="text-base md:text-lg lg:text-xl text-gray-400 max-w-3xl mx-auto mb-8 font-light leading-relaxed" style={{ fontFamily: "'Lora', serif" }}>
           Comprehensive project compliance management,<br />
           jurisdictional coordination, interactive building code compliance agent,<br />
           and real-time project tracking for AEC Professionals.
@@ -91,7 +91,7 @@ export default function Home() {
             className="bg-gray-300 hover:bg-gray-400 text-black font-normal px-8 py-6 text-base md:text-lg rounded-md transition-colors"
             style={{ fontFamily: "'Lora', serif", cursor: 'pointer' }}
           >
-            Open CoCo POps
+            Login
           </Button>
         </div>
 
